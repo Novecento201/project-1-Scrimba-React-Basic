@@ -1,13 +1,165 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #E5E5E5;;
+
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Inter, sans-serif;
+    background-color:white;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 30px 25px;
+    height: 60px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+nav.dark {
+    background-color: #21222A;
+}
+
+.logo{
+    display: flex;
+    column-gap: 7px;
+}
+.logo-img{
+    width: 30px;
+    height: 30px;
+}
+.logo-title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22.2535px;
+    line-height: 27px;
+    letter-spacing: -0.05em;
+
+    color: #61DAFB;
+}
+.toggler {
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+}
+
+.toggler p {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+    border-color: white;
+    background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+    background-color: black;
+}
+
+.toggler--light {
+    color: #2B283A;
+}
+
+nav.dark .toggler--light {
+    color: #918E9B;
+}
+
+.toggler--dark {
+    color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+    color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+    justify-content: flex-end;
+}
+
+main {
+    width: 500px;
+    padding: 57px 27px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    flex: 1 1 auto;    
+    height: 450px;
+    background-image: url("./img/white-version-react-logo.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    color: #2B283A;
+}
+
+main.dark {
+    background-color: #282D35;
+    color: white;
+    background-image: url("./img/dark-version-react-logo.png")   
+}
+  
+
+.title{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39.06px;
+    line-height: 47px;
+    letter-spacing: -0.05em;
+
+}
+
+.list{
+    padding-left:50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+}
+
+.list li {
+    padding-top:20px;
+}
+
+.list li::marker {
+    font-size: 1.6rem;
+    color: #61DAFB;
 }
